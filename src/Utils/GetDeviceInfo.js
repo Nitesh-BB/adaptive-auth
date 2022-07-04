@@ -22,10 +22,8 @@ function Adaptive() {
             authToken: jwt,
           },
           body: JSON.stringify({
-            authDetails: {
-              ...authDetails,
-              timestamp: convertToDateString(new Date()),
-            },
+            ...authDetails,
+            timestamp: convertToDateString(new Date()),
           }),
         }
       );
@@ -119,10 +117,8 @@ function Adaptive() {
           authToken: jwt,
         },
         body: JSON.stringify({
-          authDetails: {
-            ...authDetails,
-            timestamp: convertToDateString(new Date()),
-          },
+          ...authDetails,
+          timestamp: convertToDateString(new Date()),
         }),
       }
     );
