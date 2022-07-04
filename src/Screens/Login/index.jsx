@@ -27,7 +27,7 @@ const Login = () => {
     const formdata = new FormData(e.currentTarget);
     const email = formdata.get("email");
     if (!email) return setErrorMessage("Please enter email");
-    const text = data.get("text");
+    const text = formdata.get("text");
     if (
       !text ||
       text.toLowerCase() !== "the quick brown fox jumps over the lazy dog"
