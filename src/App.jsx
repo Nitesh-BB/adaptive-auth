@@ -6,13 +6,12 @@ import { useEffect } from "react";
 import { getBrowserInfo } from "./Utils/GetDeviceInfo";
 
 export default function App() {
-
-  useEffect(() => { 
-    const deviceData = () => {
+  useEffect(() => {
+    const deviceData = async () => {
       await getBrowserInfo();
     };
     deviceData();
-  },[]);
+  }, []);
   return (
     <BrowserRouter>
       <Routes>
